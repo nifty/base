@@ -16,6 +16,8 @@ class contentController extends BaseController {
 		$objDataFile = APP_PATH . '_data/' . $objName . '.php';
 		if (file_exists($objDataFile)) {
 			include $objDataFile;
+		} else {
+			$view->send404();
 		}
 		
 		$view->renderTemplate();

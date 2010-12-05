@@ -25,6 +25,11 @@ class View {
 		return ob_get_clean();
 	}
 	
+	public function send404() {
+		$this->_canvas = Registry::get('config.404Canvas');
+		header('HTTP/1.0 404 Not Found');
+	}
+	
 	public function setVars($vars) {
 		$this->_vars = $vars;
 		Registry::set('objVars', $vars);
