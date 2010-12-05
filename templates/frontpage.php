@@ -1,0 +1,1 @@
+<?php Registry::poo(); ?>
