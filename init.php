@@ -20,11 +20,10 @@ function __autoload($class) {
 require_once BASE_PATH . 'core/registry.php';
 
 /**
- ** Config files
+ ** Config
  **/
 
-require_once BASE_PATH . 'config/config.php'; 
-require_once BASE_PATH . 'config/routes.php';
+require_once APP_PATH . 'config.php'; 
 
 
 /**
