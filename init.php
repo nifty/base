@@ -1,8 +1,11 @@
 <?php
 
+session_start();
+
 function __autoload($class) {
-	$file = BASE_PATH . '/Utils/' . $class . 'Util.php';
 	
+	$file = BASE_PATH . 'Utils/' . $class . '.php';
+
 	if (!file_exists($file)) {
 		return false;
 	}
