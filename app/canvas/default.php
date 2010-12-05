@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="assets/css/screen.css" media="screen" />
 	</head>
 	<body>
+		<h1>Hello from canvas</h1>
 		<?php echo $view->renderTemplate(); ?>
 	</body>
 </html>

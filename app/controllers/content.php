@@ -13,7 +13,7 @@ class contentController extends BaseController {
 			$objName = $rtParts[0];
 		}
 		
-		$objDataFile = BASE_PATH . '_data/' . $objName . '.php';
+		$objDataFile = APP_PATH . '_data/' . $objName . '.php';
 		if (file_exists($objDataFile)) {
 			include $objDataFile;
 		}

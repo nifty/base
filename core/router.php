@@ -31,10 +31,10 @@ class Router {
 			$method = 'index';
 		}
 		
-		$controllerFile = BASE_PATH . 'controllers/' . $controller . '.php';
+		$controllerFile = APP_PATH . 'controllers/' . $controller . '.php';
 		if (!file_exists($controllerFile)) {
 			$controller = Registry::get('config.defaultController');
-			$controllerFile = BASE_PATH . 'controllers/' . $controller . '.php';
+			$controllerFile = APP_PATH . 'controllers/' . $controller . '.php';
 		}
 		
 		$controllerClass = $controller . 'Controller';

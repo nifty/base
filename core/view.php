@@ -9,11 +9,11 @@ class View {
 	function __construct() {}
 	
 	public function initCanvas() {
-		include BASE_PATH . 'canvas/' . $this->_canvas . '.php';
+		include APP_PATH . 'canvas/' . $this->_canvas . '.php';
 	}
 	
 	public function renderTemplate() {
-		$template = BASE_PATH . 'templates/' . $this->_template . '.php';
+		$template = APP_PATH . 'views/' . $this->_template . '.php';
 		
 		if (is_array($this->_vars) && !empty($this->_vars)) {
 			extract($this->_vars);
@@ -27,6 +27,7 @@ class View {
 	
 	public function setVars($vars) {
 		$this->_vars = $vars;
+		Registry::set('objVars', $vars);
 	}
 	
 	public function setCanvas($canvas) {

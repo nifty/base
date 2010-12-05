@@ -1,5 +1,15 @@
 <?php
 
+function __autoload($class) {
+	$file = BASE_PATH . '/Utils/' . $class . 'Util.php';
+	
+	if (!file_exists($file)) {
+		return false;
+	}
+	
+	include $file;
+}
+
 /**
  ** Registry - data storage
  **/
@@ -37,7 +47,7 @@ unset($routes);
  ** Render page
  **/
  
-$canvas = BASE_PATH . 'canvas/' . $view->getCanvas() . '.php';
+$canvas = APP_PATH . 'canvas/' . $view->getCanvas() . '.php';
 if (file_exists($canvas)) {
 	include_once $canvas;
 }
