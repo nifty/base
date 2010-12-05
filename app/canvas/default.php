@@ -11,7 +11,5 @@
 	<body>
 		<h1>Hello from canvas</h1>
 		<?php echo $view->renderTemplate(); ?>
-		
-		<?php VarUtils::varDump(array('hello', 'you', 'me')); ?>
 	</body>
 </html>

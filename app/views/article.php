@@ -1,3 +1,5 @@
+<?php Registry::poo(); ?>
+
 <h1><?php echo $title; ?></h1>
 <div class="intro">
 	<?php echo $intro; ?>
