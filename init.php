@@ -4,8 +4,12 @@ session_start();
 
 function __autoload($class) {
 	
-	$file = BASE_PATH . 'Utils/' . $class . '.php';
-
+	if (strstr($class, 'Utils')) {
+		$file = BASE_PATH . 'Utils/' . $class . '.php';	
+	} else if (strstr($class, 'Model')) {
+		$file = APP_PATH . 'models/' . $class . '.php';
+	}
+	
 	if (!file_exists($file)) {
 		return false;
 	}

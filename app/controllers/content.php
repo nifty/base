@@ -13,13 +13,8 @@ class contentController extends BaseController {
 			$objName = $rtParts[0];
 		}
 		
-		$objDataFile = APP_PATH . '_data/' . $objName . '.php';
-		if (file_exists($objDataFile)) {
-			include $objDataFile;
-		} else {
-			$view->send404();
-		}
-		
+		$vars = DataModel::getInstance()->getData($objName);
+		$view->setVars($vars);
 		$view->renderTemplate();
 	}
 	
