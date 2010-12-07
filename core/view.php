@@ -2,11 +2,20 @@
 
 class View {
 	
+	private static $_instance = null;
 	private $_canvas;
 	private $_template;
 	private $_vars;
 	
 	function __construct() {}
+	
+	public static function getInstance() {
+		if (!self::$_instance instanceOf View) {
+			self::$_instance = new self;
+		}
+		
+		return self::$_instance;
+	}
 	
 	public function initCanvas() {
 		include APP_PATH . 'canvas/' . $this->_canvas . '.php';

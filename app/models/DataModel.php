@@ -15,6 +15,7 @@ class DataModel {
 	}
 	
 	public function getData($dataId) {
+		$view = View::getInstance();
 		$objDataFile = APP_PATH . '_data/' . $dataId . '.php';
 		
 		if (file_exists($objDataFile)) {
