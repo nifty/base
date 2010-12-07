@@ -10,5 +10,16 @@ Class StdUtils {
 				
 		return $obfuscatedEmail;
 	}
+	
+	
+	public static function getPageTitle() {
+		if (Registry::get('controller') === Registry::get('config.indexController')) {
+			$pageTitle = Registry::get('config.siteName');
+		} else {
+			$pageTitle = sprintf(Registry::get('config.pageTitle'), Registry::get('objVars.title'));
+		}
 		
+		return $pageTitle;
+	}
+	
 }

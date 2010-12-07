@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<base href="<?php echo BASE_PATH; ?>" />
 
-		<title>Base yo</title>
+		<title><?php echo StdUtils::getPageTitle(); ?></title>
 			
 		<link rel="stylesheet" href="assets/css/screen.css" media="screen" />
 	</head>

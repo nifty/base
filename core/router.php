@@ -47,6 +47,8 @@ class Router {
 		}
 				
 		$class->$method( $this->_view );
+		Registry::set('method', $method);
+		Registry::set('controller', $controller);
 	}
 	
 }
